@@ -1132,8 +1132,8 @@
             }
         }
 
-        if (_.slideCount <= _.options.slidesToShow) {
-            _.slideOffset = 0;
+        if (_.slideCount < _.options.slidesToShow) {
+            _.slideOffset -= _.slideWidth * (_.options.slidesToShow - _.slideCount);
             verticalOffset = 0;
         }
 
